@@ -1,0 +1,18 @@
+use_peft: true
+lora_r: null
+lora_relative_r: null
+lora_target_modules: all
+train_embeddings: false
+use_rslora: false
+use_loraplus: false
+loraplus_lr_ratio: 16
+lora_alpha: 16
+
+use_care_lora: false
+
+# Standard LoRA with native whole-Transformer-block gradient checkpointing.
+# LoRA coverage only selects the block prefix; checkpointing applies to every
+# activation inside each selected block. On Mistral-7B, 0.9 means 29/32 complete
+# decoder blocks (and consequently covers 203/224 LoRA linears).
+use_lora_gradckpt: true
+lora_gradckpt_fraction: 0.9

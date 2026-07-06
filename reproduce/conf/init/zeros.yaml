@@ -1,0 +1,5 @@
+mode: simple
+lora_A: zeros
+lora_B: zeros
+# This is the default way to initialize the model parameters.
+dtype: fp32

@@ -1,0 +1,17 @@
+defaults:
+  - _self_
+  - model: t5base
+seed: 0
+dry_run: False
+wandb:
+  project: "CARE-LoRA"
+  name: "t5base_lora"
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  output_subdir: .hydra
+artifacts:
+  runtime_dir: null
+
+# peft.use_rslora is disabled by default. Enable it from the command line with
+# peft.use_rslora=true when Rank-Stabilized LoRA is part of the experiment.

@@ -1,0 +1,48 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environments and secrets
+.env
+.env.*
+.venv/
+venv/
+
+# Experiment outputs and caches
+results/
+results*/
+outputs/
+wandb/
+data_cache/
+eval_datasets/
+reproduce/data_cache/
+reproduce/processed_datasets/
+reproduce/eval_datasets/
+reproduce/results/
+reproduce/outputs/
+reproduce/logs/
+reproduce/adapters_glue/
+
+# Local logs and temporary files
+*.log
+*.out
+*results.txt
+tmp.py
+snapshot/
+snapshot*/
+code_eval/
+
+# Model/checkpoint artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+
+# OS files
+.DS_Store

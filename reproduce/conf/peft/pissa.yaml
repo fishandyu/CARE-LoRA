@@ -1,0 +1,17 @@
+use_peft: true
+lora_r: null
+lora_relative_r: null
+lora_target_modules: all
+train_embeddings: false
+use_rslora: false
+use_loraplus: false
+loraplus_lr_ratio: 16
+lora_alpha: 16
+
+# PiSSA uses the same LoRA module structure, but initializes LoRA A/B from
+# the principal singular components of the frozen base weight and stores the
+# residual in the base layer. Fast SVD keeps large-model startup practical.
+pissa: true
+init_lora_weights: pissa_niter_4
+
+use_care_lora: false

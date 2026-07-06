@@ -1,0 +1,15 @@
+use_peft: true
+lora_r: null
+lora_relative_r: null
+lora_target_modules: all
+train_embeddings: false
+use_rslora: false
+use_loraplus: false
+loraplus_lr_ratio: 16
+lora_alpha: 16
+
+# LoRAct baseline.
+use_lorafa: false
+use_care_lora: false
+use_loract: true
+loract_rank: 64

@@ -1,0 +1,17 @@
+# SVD initialization based on the *input activation X* to each LoRA linear layer.
+# We collect a few batches of X, run SVD/PCA on X, and set lora_A to the top-r right singular vectors.
+# This corresponds to an input-side dimensionality reduction (z = x @ A^T).
+mode: svd_x
+
+# Initialize lora_B (A is determined by SVD of X).
+# Common choices: zeros (keeps initial delta ~ 0), unit/kaiming/gaussian.
+lora_B: zeros
+
+# Data collection settings
+bsz: 1
+iters: 8
+max_length: 512
+max_samples_per_layer: 8192
+
+# dtype casting for LoRA params after init
+dtype: fp32
